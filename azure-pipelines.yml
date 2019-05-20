@@ -14,5 +14,5 @@ steps:
   displayName: 'Build the docker image'
 
 - script: |
-    docker run -it fake_test_repo/enpass:latest ls -lrtah /opt/enpass
-  displayName: 'Run the image created'
+    docker images | grep enpass
+  displayName: 'Verify that image has been created'
